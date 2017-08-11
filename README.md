@@ -6,7 +6,7 @@ NOTE: We do not want to create a new boilerplate. The `create-react-app` tool is
 ```
 $ create-react-app my-app
 $ cd my-app
-$ yo acklen
+$ yo acklen-react
 ```
 
 And the result would be the code generated from `create-react-app` plus all the other things we need to satisfy the requirements in https://gist.github.com/bsommardahl/c2d57d51242b2336b7876f20fcf16ac6.
