@@ -12,4 +12,4 @@ $ yo acklen
 And the result would be the code generated from `create-react-app` plus all the other things we need to satisfy the requirements in https://gist.github.com/bsommardahl/c2d57d51242b2336b7876f20fcf16ac6.
 
 ## Contributions
-Contributions are welcome. Please base your branches off of `master` but don't plan on merging it back in to `master`. The deltas from your branch will be used to craft the yeoman generator or sub-generators.
+Contributions are welcome. Please base your branches off of `master`. 
