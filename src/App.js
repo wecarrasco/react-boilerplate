@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -13,6 +13,13 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <div>
+          <p>
+            Front-End Version {process.env.REACT_APP_DEPLOYMENT_ENV}{" "}
+            {process.env.REACT_APP_BUILD_NUMBER}
+          </p>
+          <p>Back-End Version (get from the api) </p>
+        </div>
       </div>
     );
   }
