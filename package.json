@@ -9,9 +9,12 @@
     "react-scripts": "1.0.11"
   },
   "scripts": {
+    "prestart": "flow",
     "start": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
+    "prebuild": "flow",
     "build": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "flow": "flow",
     "eject": "react-scripts eject"
   }
 }
