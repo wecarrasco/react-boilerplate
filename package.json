@@ -9,8 +9,8 @@
     "react-scripts": "1.0.11"
   },
   "scripts": {
-    "start": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER react-scripts start",
-    "build": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER react-scripts build",
+    "start": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
+    "build": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
