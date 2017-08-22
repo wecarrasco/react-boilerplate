@@ -5,12 +5,14 @@
   "homepage": "https://bsommardahl.github.io/react-boilerplate",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "cross-env": "^5.0.5",
-    "gh-pages": "^1.0.0",
-    "jest-cli": "^20.0.4",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0",
+    "cross-env": "^5.0.5",
+    "jest-cli": "^20.0.4",
     "react-scripts": "1.0.11"
   },
   "scripts": {
