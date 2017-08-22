@@ -4,8 +4,14 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { PageHeader, Well, Jumbotron } from "react-bootstrap";
+import { Logger } from "./services/logger";
 
 class App extends Component {
+  componentDidMount() {
+    const logger = new Logger();
+    logger.log("testing", "Info");
+  }
+
   render() {
     return (
       <div className="App">
