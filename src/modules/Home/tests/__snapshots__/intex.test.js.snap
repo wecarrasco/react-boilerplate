@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> Expect to be render correctly 1`] = `
+<div
+  className="jumbotron"
+>
+  <p
+    className="App-intro"
+  >
+    To get started, edit 
+    <code>
+      src/App.js
+    </code>
+     and save to reload.
+  </p>
+</div>
+`;
