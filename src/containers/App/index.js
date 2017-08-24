@@ -6,8 +6,8 @@ import {connect} from 'react-redux';
 import './App.css';
 import {Logger} from '../../services/logger';
 import Home from '../Home';
-import AppHeader from './AppHeader';
-import AppFooter from './AppFooter';
+import AppHeader from '../../components/AppHeader';
+import AppFooter from '../../components/AppFooter';
 
 export class App extends Component<AppProps, AppState> {
   componentDidMount() {

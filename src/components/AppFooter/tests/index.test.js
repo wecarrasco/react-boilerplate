@@ -1,11 +1,17 @@
 import React from 'react';
-import AppHeader from '../AppHeader';
+import AppFooter from '../index';
 import renderer from 'react-test-renderer';
 import {MemoryRouter} from 'react-router';
 
 describe('<App />', () => {
   it('Expect to be render correctly', () => {
-    const wrapper = renderer.create(<AppHeader />);
+    const props = {
+      buildInformation: {
+        deploymentEnvironment: 'test',
+        frontEndBuldNumber: 123,
+      },
+    };
+    const wrapper = renderer.create(<AppFooter {...props} />);
     expect(wrapper).toMatchSnapshot();
   });
 });
