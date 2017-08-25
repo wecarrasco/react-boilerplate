@@ -1,10 +1,6 @@
 export type BuildInformation = {
-  frontEndBuldNumber: number,
+  frontEndBuildNumber: number,
   deploymentEnvironment: string,
-};
-
-export type AppProps = {
-  buildInformation: BuildInformation,
 };
 
 export type AppState = {

@@ -7,7 +7,7 @@ describe('<App />', () => {
   it('Expect to be render correctly', () => {
     const props = {
       deploymentEnvironment: 'test',
-      frontEndBuldNumber: 123,
+      frontEndBuildNumber: 123,
     };
     const wrapper = renderer.create(<AppFooter {...props} />);
     expect(wrapper).toMatchSnapshot();

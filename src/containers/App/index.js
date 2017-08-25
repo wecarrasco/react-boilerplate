@@ -1,5 +1,5 @@
 // @flow
-import type {AppProps, AppState} from './types';
+import type {AppState, BuildInformation} from './types';
 import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
 import {connect} from 'react-redux';
@@ -9,7 +9,11 @@ import Home from '../../components/Home';
 import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
 
-export class App extends Component<AppProps> {
+type Props = {
+  buildInformation: BuildInformation,
+};
+
+export class App extends Component<Props> {
   componentDidMount() {
     const logger = new Logger();
     logger.log('testing', 'Info');
@@ -24,14 +28,14 @@ export class App extends Component<AppProps> {
           deploymentEnvironment={
             this.props.buildInformation.deploymentEnvironment
           }
-          frontEndBuldNumber={this.props.buildInformation.frontEndBuldNumber}
+          frontEndBuildNumber={this.props.buildInformation.frontEndBuildNumber}
         />
       </div>
     );
   }
 }
 
-export const mapStateToProps = ({app}: AppState): AppProps => ({
+export const mapStateToProps = ({app}: AppState): Props => ({
   buildInformation: app.buildInformation,
 });
 

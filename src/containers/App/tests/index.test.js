@@ -8,7 +8,7 @@ describe('<App />', () => {
     const props = {
       buildInformation: {
         deploymentEnvironment: 'test',
-        frontEndBuldNumber: 123,
+        frontEndBuildNumber: 123,
       },
     };
     const wrapper = renderer.create(
@@ -21,8 +21,18 @@ describe('<App />', () => {
   describe('mapStateToProps', () => {
     it('should return app buildinformation object', () => {
       expect(
-        mapStateToProps({app: {buildInformation: {}}}).buildInformation
-      ).toEqual({});
+        mapStateToProps({
+          app: {
+            buildInformation: {
+              deploymentEnvironment: 'test',
+              frontEndBuildNumber: 123,
+            },
+          },
+        }).buildInformation
+      ).toEqual({
+        deploymentEnvironment: 'test',
+        frontEndBuildNumber: 123,
+      });
     });
   });
 });
