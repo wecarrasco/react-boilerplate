@@ -1,5 +1,5 @@
 import React from 'react';
-import {App} from '../index';
+import {App, mapStateToProps} from '../index';
 import renderer from 'react-test-renderer';
 import {MemoryRouter} from 'react-router';
 
@@ -17,5 +17,12 @@ describe('<App />', () => {
       </MemoryRouter>
     );
     expect(wrapper).toMatchSnapshot();
+  });
+  describe('mapStateToProps', () => {
+    it('should return app buildinformation object', () => {
+      expect(
+        mapStateToProps({app: {buildInformation: {}}}).buildInformation
+      ).toEqual({});
+    });
   });
 });

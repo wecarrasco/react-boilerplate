@@ -1,14 +1,16 @@
 // @flow
-import type {AppProps} from '../../containers/App/types';
+import type {BuildInformation} from '../../containers/App/types';
 import React from 'react';
 import {Well} from 'react-bootstrap';
 
-const AppFooter = ({buildInformation}: AppProps) => {
+const AppFooter = ({
+  deploymentEnvironment,
+  frontEndBuldNumber,
+}: BuildInformation) => {
   return (
     <Well>
       <p>
-        Front-End Version {buildInformation.deploymentEnvironment}{' '}
-        {buildInformation.frontEndBuldNumber}
+        Front-End Version {deploymentEnvironment} {frontEndBuldNumber}
       </p>
       <p>Back-End Version (get from the api) </p>
     </Well>

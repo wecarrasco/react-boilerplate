@@ -1,13 +1,18 @@
-const initialState = {
+import type {AppState} from './types';
+
+const initialState: AppState = {
   buildInformation: {
     frontEndBuldNumber: process.env.REACT_APP_BUILD_NUMBER,
     deploymentEnvironment: process.env.REACT_APP_DEPLOYMENT_ENV,
   },
 };
 
-export default (state = initialState, action) => {
-  switch (action.type) {
+const app = (state: AppState = initialState, action): AppState => {
+  const {type} = action;
+  switch (type) {
     default:
       return state;
   }
 };
+
+export default app;

@@ -5,11 +5,11 @@ import {Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 import './App.css';
 import {Logger} from '../../services/logger';
-import Home from '../Home';
+import Home from '../../components/Home';
 import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
 
-export class App extends Component<AppProps, AppState> {
+export class App extends Component<AppProps> {
   componentDidMount() {
     const logger = new Logger();
     logger.log('testing', 'Info');
@@ -20,16 +20,19 @@ export class App extends Component<AppProps, AppState> {
       <div className="App">
         <AppHeader />
         <Route exact path="/" component={Home} />
-        <AppFooter buildInformation={this.props.buildInformation} />
+        <AppFooter
+          deploymentEnvironment={
+            this.props.buildInformation.deploymentEnvironment
+          }
+          frontEndBuldNumber={this.props.buildInformation.frontEndBuldNumber}
+        />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state: AppState): AppProps => {
-  return {
-    buildInformation: state.app.buildInformation,
-  };
-};
+export const mapStateToProps = ({app}: AppState): AppProps => ({
+  buildInformation: app.buildInformation,
+});
 
 export default connect(mapStateToProps, null)(App);
