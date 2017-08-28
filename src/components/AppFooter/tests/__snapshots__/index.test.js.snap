@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Expect to be render correctly 1`] = `
+<div
+  className="well"
+>
+  <p>
+    Front-End Version 
+    test
+     
+    123
+  </p>
+  <p>
+    Back-End Version (get from the api) 
+  </p>
+</div>
+`;
