@@ -2,12 +2,16 @@
 
 import React from 'react';
 import {Jumbotron} from 'react-bootstrap';
+import styled from 'styled-components';
 
-const Home = () =>
+const AppIntro = styled.p`font-size: large;`;
+
+const Home = () => (
   <Jumbotron>
-    <p className="App-intro">
+    <AppIntro>
       To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-  </Jumbotron>;
+    </AppIntro>
+  </Jumbotron>
+);
 
 export default Home;

@@ -5,7 +5,7 @@ exports[`<Home /> Expect to be render correctly 1`] = `
   className="jumbotron"
 >
   <p
-    className="App-intro"
+    className="sc-bdVaJa dQSkNS"
   >
     To get started, edit 
     <code>
