@@ -2,12 +2,12 @@
 
 exports[`<App /> Expect to be render correctly 1`] = `
 <div
-  className="App-header"
+  className="sc-bdVaJa kWmPOr page-header"
 >
   <h1>
     <img
       alt="logo"
-      className="App-logo"
+      className="sc-bwzfXH ldyXqg"
       src="logo.svg"
     />
     Welcome to React
