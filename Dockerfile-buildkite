@@ -15,9 +15,5 @@ RUN flow-typed install styled-components@2.2.2
 RUN yarn
 
 
-# Bundle app source
-
-#RUN npm run build
-
 EXPOSE 3000
 CMD [ "echo", "frontend" ]

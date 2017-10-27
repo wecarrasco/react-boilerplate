@@ -41,6 +41,7 @@
     "flow": "flow",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:docker": "docker-composer up web"
   }
 }

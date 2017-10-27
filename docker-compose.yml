@@ -1,7 +1,7 @@
 version: "2"
 
 services:
-  app:
+  buildkite:
     build:
       context: .
       dockerfile: Dockerfile-buildkite
@@ -33,3 +33,18 @@ services:
       - APPNAME
       - AWS_REGION_PROD
       - AWS_REGION
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/flow-typed
+      - /usr/src/app/build
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    environment:
+      - ENVIRONMENT
+      - NODE_ENV    
