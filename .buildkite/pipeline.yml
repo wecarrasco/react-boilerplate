@@ -1,0 +1,17 @@
+steps:
+  - name: ':fire:Test'
+    command: '/.buildkite/test.sh'
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER: buildkite
+    agents:
+      queue: 'elastic'
+
+  - wait
+
+  - name: ':hammer: :rocket: Build and Deploy'
+    command: '/.buildkite/deploy.sh'
+    env:
+      BUILDKITE_DOCKER_COMPOSE_CONTAINER: buildkite
+    branches: 'develop staging master'
+    agents:
+      queue: 'elastic'
