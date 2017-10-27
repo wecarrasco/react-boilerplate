@@ -10,6 +10,7 @@ services:
       - /usr/bin/buildkite-agent:/usr/bin/buildkite-agent
       - /usr/src/app/sonar-scanner-3.0.3.778-linux
       - /usr/src/app/node_modules
+      - /usr/src/app/flow-typed
       - /usr/src/app/build
     ports:
       - "3000:3000"
