@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 !/flow-typed/npm/styled-components_v2.x.x.js
+/flow-typed
 
 # testing
 /coverage
