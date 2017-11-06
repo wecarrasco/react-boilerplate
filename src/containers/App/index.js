@@ -1,10 +1,10 @@
 // @flow
-import type {AppState, BuildInformation, SampleData} from './types';
-import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {Route} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {Logger} from '../../services/logger';
+import type { BuildInformation, SampleData, Actions } from './types';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Logger } from '../../services/logger';
 import Home from '../../components/Home';
 import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
@@ -17,7 +17,7 @@ const AppDiv = styled.div`text-align: center;`;
 type Props = {
   buildInformation: BuildInformation,
   sampleData: SampleData,
-  actions: appActions,
+  actions: Actions
 };
 
 export class App extends Component<Props> {
@@ -34,15 +34,10 @@ export class App extends Component<Props> {
         <Route exact path="/" component={Home} />
         <div>
           <h1>SAGA SAMPLE</h1>
-          {this.props.sampleData &&
-            this.props.sampleData.map(data => (
-              <div key={data.id}>{data.name}</div>
-            ))}
+          {this.props.sampleData && this.props.sampleData.map((data) => <div key={data.id}>{data.name}</div>)}
         </div>
         <AppFooter
-          deploymentEnvironment={
-            this.props.buildInformation.deploymentEnvironment
-          }
+          deploymentEnvironment={this.props.buildInformation.deploymentEnvironment}
           frontEndBuildNumber={this.props.buildInformation.frontEndBuildNumber}
         />
       </AppDiv>
@@ -50,15 +45,15 @@ export class App extends Component<Props> {
   }
 }
 
-export const mapStateToProps = ({app}: AppState): Props => ({
+export const mapStateToProps = ({ app }: Object): Props => ({
   buildInformation: app.buildInformation,
   sampleData: app.sampleData,
-  actions: app.actions,
+  actions: app.actions
 });
 
-export function mapDispatchToProps(dispatch: any) {
-  const actions = bindActionCreators({...appActions}, dispatch);
-  return {actions};
+export function mapDispatchToProps(dispatch: any): Object {
+  const actions = bindActionCreators({ ...appActions }, dispatch);
+  return { actions };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
