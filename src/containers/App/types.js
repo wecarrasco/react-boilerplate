@@ -1,14 +1,19 @@
 export type BuildInformation = {
-  frontEndBuildNumber: number,
-  deploymentEnvironment: string,
+  frontEndBuildNumber: any,
+  deploymentEnvironment: any
 };
 
-export type SampleData= Array<any>;
+export type SampleData = Array<any>;
 
-export type Actions= any;
+export type Actions = any;
 
 export type AppState = {
   buildInformation: BuildInformation,
   sampleData: SampleData,
-  actions: Actions,
+  actions?: Actions
+};
+
+export type Action<TPayload> = {
+  type: string,
+  payload?: TPayload
 };
