@@ -1,9 +1,11 @@
 // @flow
 import React from 'react';
 import logo from '../../logo.svg';
-import {PageHeader} from 'react-bootstrap';
+import { PageHeader } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
 
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const AppLogoSpin = keyframes`
   from {
@@ -28,7 +30,7 @@ const Logo = styled.img`
 const AppHeader = () => (
   <StyledPageHeader>
     <Logo src={logo} alt="logo" />
-    Welcome to React
+    <FormattedMessage {...messages.Welcome} />
   </StyledPageHeader>
 );
 

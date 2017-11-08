@@ -13,7 +13,9 @@ exports[`<App /> Expect to be render correctly 1`] = `
         className="sc-htpNat lkfFGP"
         src="logo.svg"
       />
-      Welcome to React
+      <span>
+        Welcome to React
+      </span>
     </h1>
   </div>
   <div
@@ -22,16 +24,20 @@ exports[`<App /> Expect to be render correctly 1`] = `
     <p
       className="sc-bdVaJa dQSkNS"
     >
-      To get started, edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
+      <span>
+        To get started, edit 
+        <code>
+          src/App.js
+        </code>
+         and save to reload.
+      </span>
     </p>
   </div>
   <div>
     <h1>
-      SAGA SAMPLE
+      <span>
+        Saga Sample
+      </span>
     </h1>
     <div>
       test
@@ -41,13 +47,16 @@ exports[`<App /> Expect to be render correctly 1`] = `
     className="well"
   >
     <p>
-      Front-End Version 
-      test
-       
-      123
+      <span>
+        Front-End Version test 123
+      </span>
     </p>
     <p>
-      Back-End Version (get from the api) 
+       
+      <span>
+        Back-End Version (get from the api)
+      </span>
+       
     </p>
   </div>
 </div>

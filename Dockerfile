@@ -7,8 +7,8 @@ WORKDIR /usr/src/app
 COPY . .
 RUN apt-get update
 RUN apt-get install git
-RUN npm i -g flow-typed gulp
-RUN flow-typed install styled-components@2.2.2
+RUN npm i -g gulp
+
 RUN yarn
 
 EXPOSE 3000
