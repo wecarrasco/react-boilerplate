@@ -7,11 +7,13 @@ exports[`<Home /> Expect to be render correctly 1`] = `
   <p
     className="sc-bdVaJa dQSkNS"
   >
-    To get started, edit 
-    <code>
-      src/App.js
-    </code>
-     and save to reload.
+    <span>
+      To get started, edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </span>
   </p>
 </div>
 `;

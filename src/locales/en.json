@@ -1,0 +1,7 @@
+{
+  "App.Footer.BackendVersion": "Back-End Version (get from the api)",
+  "App.Footer.FrontEndInformation": "Front-End Version {deploymentEnvironment} {frontEndBuildNumber}",
+  "App.Header.Welcome": "Welcome to React",
+  "App.Home.GetStarted": "To get started, edit {file} and save to reload.",
+  "App.SagaSample": "Saga Sample"
+}
