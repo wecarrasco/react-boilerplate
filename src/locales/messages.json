@@ -1,0 +1,27 @@
+[
+  {
+    "id": "App.Footer.BackendVersion",
+    "defaultMessage": "Back-End Version (get from the api)",
+    "filepath": "./src/components/AppFooter/messages.js"
+  },
+  {
+    "id": "App.Footer.FrontEndInformation",
+    "defaultMessage": "Front-End Version {deploymentEnvironment} {frontEndBuildNumber}",
+    "filepath": "./src/components/AppFooter/messages.js"
+  },
+  {
+    "id": "App.Header.Welcome",
+    "defaultMessage": "Welcome to React",
+    "filepath": "./src/components/AppHeader/messages.js"
+  },
+  {
+    "id": "App.Home.GetStarted",
+    "defaultMessage": "To get started, edit {file} and save to reload.",
+    "filepath": "./src/components/Home/messages.js"
+  },
+  {
+    "id": "App.SagaSample",
+    "defaultMessage": "Saga Sample",
+    "filepath": "./src/containers/App/messages.js"
+  }
+]

@@ -8,6 +8,8 @@ import { Logger } from '../../services/logger';
 import Home from '../../components/Home';
 import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
 import * as appActions from './actions';
 
 import styled from 'styled-components';
@@ -33,7 +35,9 @@ export class App extends Component<Props> {
         <AppHeader />
         <Route exact path="/" component={Home} />
         <div>
-          <h1>SAGA SAMPLE</h1>
+          <h1>
+            <FormattedMessage {...messages.SagaSample} />
+          </h1>
           {this.props.sampleData && this.props.sampleData.map((data) => <div key={data.id}>{data.name}</div>)}
         </div>
         <AppFooter

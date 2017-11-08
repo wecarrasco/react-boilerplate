@@ -10,7 +10,9 @@ exports[`<App /> Expect to be render correctly 1`] = `
       className="sc-bwzfXH ldyXqg"
       src="logo.svg"
     />
-    Welcome to React
+    <span>
+      Welcome to React
+    </span>
   </h1>
 </div>
 `;

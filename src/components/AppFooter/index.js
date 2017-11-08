@@ -1,17 +1,20 @@
 // @flow
-import type {BuildInformation} from '../../containers/App/types';
+import type { BuildInformation } from '../../containers/App/types';
 import React from 'react';
-import {Well} from 'react-bootstrap';
+import { Well } from 'react-bootstrap';
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
 
-const AppFooter = ({
-  deploymentEnvironment,
-  frontEndBuildNumber,
-}: BuildInformation) =>
+const AppFooter = ({ deploymentEnvironment, frontEndBuildNumber }: BuildInformation) => (
   <Well>
     <p>
-      Front-End Version {deploymentEnvironment} {frontEndBuildNumber}
+      <FormattedMessage {...messages.FrontEndInformation} values={{ deploymentEnvironment, frontEndBuildNumber }} />
     </p>
-    <p>Back-End Version (get from the api) </p>
-  </Well>;
+    <p>
+      {' '}
+      <FormattedMessage {...messages.BackendVersion} />{' '}
+    </p>
+  </Well>
+);
 
 export default AppFooter;
