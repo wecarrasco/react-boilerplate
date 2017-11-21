@@ -5,10 +5,16 @@ import { Well } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
-const AppFooter = ({ deploymentEnvironment, frontEndBuildNumber }: BuildInformation) => (
+const AppFooter = ({
+  deploymentEnvironment,
+  frontEndBuildNumber
+}: BuildInformation) => (
   <Well>
     <p>
-      <FormattedMessage {...messages.FrontEndInformation} values={{ deploymentEnvironment, frontEndBuildNumber }} />
+      <FormattedMessage
+        {...messages.FrontEndInformation}
+        values={{ deploymentEnvironment, frontEndBuildNumber }}
+      />
     </p>
     <p>
       {' '}

@@ -28,7 +28,6 @@ if (process.env.NODE_ENV === 'production') {
 
 // $FlowFixMe
 appSagas.map(store.runSaga);
-
 ReactDOM.render(
   <Provider store={store}>
     <LanguageProvider messages={i18n.messages}>
