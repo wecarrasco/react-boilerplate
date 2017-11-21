@@ -27,6 +27,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "babel-preset-flow": "^6.23.0",
     "cross-env": "^5.0.5",
     "flow-bin": "0.58.0",
     "gh-pages": "^1.0.0",
@@ -43,11 +44,9 @@
     "extractintl": "react-intl-cra ./src/**/*.js ./src/locales/messages.json",
     "postextractintl": "node ./scripts/generateLocales",
     "prestart": "npm run flow",
-    "start":
-      "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
+    "start": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
     "prebuild": "npm run flow",
-    "build":
-      "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
+    "build": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
     "pretest": "npm run flow",
     "test": "react-scripts test --env=jsdom",
     "flow": "flow check",
@@ -62,7 +61,10 @@
     "coverage": "react-scripts test --env=jsdom --coverage"
   },
   "lint-staged": {
-    "*.{js,json,css}": ["prettier --write", "git add"]
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "singleQuote": true
