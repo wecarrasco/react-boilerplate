@@ -6,6 +6,7 @@
     "async": "^2.5.0",
     "aws-sdk": "^2.141.0",
     "bootstrap": "^3.3.7",
+    "flag": "^3.0.0-0",
     "fs": "^0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-s3-upload": "^1.6.6",
@@ -31,19 +32,17 @@
     "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
     "jest-cli": "^20.0.4",
+    "react-intl-cra": "^0.2.9",
     "react-scripts": "1.0.11",
-    "react-test-renderer": "^15.6.1",
-    "react-intl-cra": "^0.2.9"
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "extractintl": "react-intl-cra ./src/**/*.js ./src/locales/messages.json",
     "postextractintl": "node ./scripts/generateLocales",
     "prestart": "npm run flow",
-    "start":
-      "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
+    "start": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
     "prebuild": "npm run flow",
-    "build":
-      "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
+    "build": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
     "pretest": "npm run flow",
     "test": "react-scripts test --env=jsdom",
     "flow": "flow check",
