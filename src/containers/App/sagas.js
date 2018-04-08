@@ -1,3 +1,4 @@
+/* @flow */
 import { put, takeLatest } from 'redux-saga/effects';
 import { GET_SAMPLE_DATA } from './constants';
 import { getSampleDataSuccess, getSampleDataError } from './actions';

@@ -1,3 +1,4 @@
+// @flow
 import type { Action, SampleData } from './types';
 import * as ActionTypes from './constants';
 

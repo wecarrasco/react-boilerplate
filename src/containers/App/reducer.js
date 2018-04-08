@@ -1,5 +1,9 @@
+// @flow
 import type { AppState, Action } from './types';
-import { GET_SAMPLE_DATA_SUCCESS, GET_SAMPLE_DATA_ERROR_MESSAGE } from './constants';
+import {
+  GET_SAMPLE_DATA_SUCCESS,
+  GET_SAMPLE_DATA_ERROR_MESSAGE
+} from './constants';
 
 const initialState: AppState = {
   buildInformation: {
