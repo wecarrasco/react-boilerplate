@@ -1,3 +1,4 @@
+// @flow
 export type BuildInformation = {
   frontEndBuildNumber: any,
   deploymentEnvironment: any

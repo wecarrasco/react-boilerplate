@@ -5,55 +5,55 @@
   "dependencies": {
     "async": "^2.5.0",
     "aws-sdk": "^2.141.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0",
     "flag": "^3.0.0-0",
+    "flow-bin": "^0.69.0",
     "fs": "^0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-s3-upload": "^1.6.6",
     "gulp-using": "^0.1.1",
     "gulp-util": "^3.0.8",
     "loggly-jslogger": "^2.2.1",
-    "react": "^15.6.1",
-    "react-bootstrap": "^0.31.2",
-    "react-dom": "^15.6.1",
+    "react": "^16.3.1",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.1",
     "react-intl": "^2.4.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
     "react-router-redux": "next",
     "redux": "^3.7.2",
-    "redux-persist": "^4.9.1",
-    "redux-saga": "^0.15.6",
-    "styled-components": "^2.2.2",
+    "redux-persist": "^5.9.1",
+    "redux-saga": "^0.16.0",
+    "styled-components": "^3.2.5",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-preset-flow": "^6.23.0",
     "cross-env": "^5.0.5",
-    "flow-bin": "0.58.0",
     "gh-pages": "^1.0.0",
     "glob": "^7.1.2",
     "husky": "^0.14.3",
-    "jest-cli": "^20.0.4",
-    "lint-staged": "^5.0.0",
+    "lint-staged": "^7.0.4",
     "prettier-eslint": "^8.2.2",
-    "react-intl-cra": "^0.2.9",
-    "react-scripts": "1.0.11",
-    "react-test-renderer": "^15.6.1"
+    "react-intl-cra": "^0.3.3",
+    "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.3.1"
   },
   "scripts": {
     "extractintl": "react-intl-cra ./src/**/*.js ./src/locales/messages.json",
     "postextractintl": "node ./scripts/generateLocales",
     "prestart": "npm run flow",
-    "start": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
+    "start":
+      "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts start",
     "prebuild": "npm run flow",
-    "build": "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
+    "build":
+      "cross-env REACT_APP_BUILD_NUMBER=$BUILDKITE_BUILD_NUMBER REACT_APP_DEPLOYMENT_ENV=$BUILDKITE_BRANCH react-scripts build",
     "pretest": "npm run flow",
     "test": "react-scripts test --env=jsdom",
-    "flow": "flow check",
+    "flow": "flow",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
-    "predocker:start": "npm run extractintl",
     "docker:start": "docker-compose up --build web",
     "docker:stop": "docker-compose down",
     "lint": "eslint . --fix",
@@ -61,10 +61,7 @@
     "coverage": "react-scripts test --env=jsdom --coverage"
   },
   "lint-staged": {
-    "*.{js,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json,css}": ["prettier --write", "git add"]
   },
   "prettier": {
     "singleQuote": true

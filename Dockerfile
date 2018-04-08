@@ -7,13 +7,8 @@ WORKDIR /usr/src/app
 COPY . .
 RUN apt-get update
 RUN apt-get install git
-<<<<<<< HEAD
-RUN npm i -g gulp
+RUN npm i -g gulp nodemon
 
-=======
-RUN npm i -g flow-typed gulp nodemon
-RUN flow-typed install styled-components@2.2.2
->>>>>>> develop
 RUN yarn
 
 EXPOSE 3000
