@@ -10,7 +10,7 @@ const Dislike = styled.span.attrs({
   className: 'fa fa-thumbs-o-down',
   ariaHidden: 'true'
 })``;
-
+// $FlowFixMe
 const LikeButton = props => {
   const LikeOrDislike = props.like ? Like : Dislike;
   return (

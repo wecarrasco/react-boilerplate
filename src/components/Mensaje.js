@@ -16,7 +16,7 @@ const CardTitle = styled.h5.attrs({
 const CardText = styled.p.attrs({
   className: 'card-text'
 })``;
-
+// $FlowFixMe
 const Mensaje = props => (
   <Card>
     <CardBody>

@@ -13,7 +13,7 @@ const Row = styled.div.attrs({
 const Col = styled.div.attrs({
   className: 'col-sm'
 })``;
-
+// $FlowFixMe
 const StatusMessageBar = props => (
   <Container>
     <Row>

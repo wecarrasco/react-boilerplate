@@ -1,19 +1,15 @@
 // @flow
-
-import React from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
-
-const AppIntro = styled.p`font-size: large;`;
-
-const Home = () => (
-  <Jumbotron>
-    <AppIntro>
-      <FormattedMessage {...messages.GetStarted} values={{ file: <code>src/App.js</code> }} />
-    </AppIntro>
-  </Jumbotron>
-);
+import Mensaje from '../Mensaje';
+type Props = {
+  Messages: any
+};
+class Home extends Component<Props> {
+  render() {
+    const mensajes = this.props.Messages.map(x => <Mensaje />);
+    return null;
+  }
+}
 
 export default Home;

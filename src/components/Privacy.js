@@ -7,7 +7,7 @@ const PublicPrivacy = styled.span.attrs({
 const PrivatePrivacy = styled.span.attrs({
   className: 'badge badge-danger'
 })``;
-
+// $FlowFixMe
 const Privacy = props => {
   const MyPrivacy = props.public ? PublicPrivacy : PrivatePrivacy;
   const message = props.public ? 'Public' : 'Private';
