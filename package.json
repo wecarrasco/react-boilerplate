@@ -21,6 +21,7 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.2",
     "react-router-redux": "next",
+    "react-styleguidist": "^7.0.5",
     "redux": "^3.7.2",
     "redux-persist": "^5.9.1",
     "redux-saga": "^0.16.0",
@@ -58,7 +59,9 @@
     "docker:stop": "docker-compose down",
     "lint": "eslint . --fix",
     "precommit": "lint-staged",
-    "coverage": "react-scripts test --env=jsdom --coverage"
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "lint-staged": {
     "*.{js,json,css}": ["prettier --write", "git add"]
