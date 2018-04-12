@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './store';
 import 'bootstrap/dist/css/bootstrap.css';
+// $FlowFixMe
+import 'font-awesome/css/font-awesome.css';
 import './index.css';
 import App from './containers/App';
 // $FlowFixMe

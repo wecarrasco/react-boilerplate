@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const Like = styled.span.attrs({
   className: 'fa fa-thumbs-o-up',
-  ariaHidden: 'true'
+  'aria-hidden': 'true'
 })``;
 const Dislike = styled.span.attrs({
   className: 'fa fa-thumbs-o-down',
-  ariaHidden: 'true'
+  'aria-hidden': 'true'
 })``;
 // $FlowFixMe
 const LikeButton = props => {

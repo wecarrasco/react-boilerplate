@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Logger } from '../../services/logger';
-import Home from '../../components/Home';
+import Home from '../Home';
 import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
 import * as appActions from './actions';
@@ -34,7 +34,6 @@ export class App extends Component<Props> {
       <AppDiv>
         <AppHeader />
         <Route exact path="/" component={Home} />
-
         <AppFooter
           deploymentEnvironment={
             this.props.buildInformation.deploymentEnvironment
