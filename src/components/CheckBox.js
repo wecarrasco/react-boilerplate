@@ -13,7 +13,7 @@ const CustomInput = styled.input.attrs({
 
 const CustomLabel = styled.label.attrs({
   className: 'custom-control-label',
-  for: 'customCheck1'
+  htmlFor: 'customCheck1'
 })``;
 // $FlowFixMe
 const CheckBox = props => (

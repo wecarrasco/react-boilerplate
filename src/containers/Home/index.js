@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import ListOfMessages from '../../components/ListOfMessages';
-class Home extends Component<any> {
-  mensajes = [
-    {
-      title: 'primer Mensaje',
-      mensaje: 'este es un mensaje',
-      public: true
-    },
-    {
-      title: 'segundo Mensaje',
-      mensaje: 'este es un mensaje',
-      public: false
-    }
-  ];
+import SendMessage from '../../components/SendMessage';
+class Home extends Component<any, any> {
+  state = {
+    mensajes: [
+      {
+        title: 'primer Mensaje',
+        mensaje: 'este es un mensaje',
+        public: true
+      },
+      {
+        title: 'segundo Mensaje',
+        mensaje: 'este es un mensaje',
+        public: false
+      }
+    ]
+  };
+
   render() {
-    return <ListOfMessages Messages={this.mensajes} />;
+    return (
+      <div>
+        <ListOfMessages Messages={this.state.mensajes} />
+        <SendMessage />
+      </div>
+    );
   }
 }
 
