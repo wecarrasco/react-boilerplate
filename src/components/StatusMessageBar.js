@@ -1,18 +1,14 @@
-import styled from 'styled-components';
 import LikeButton from './LikeButton';
 import Privacy from './Privacy';
 import React from 'react';
+import { Container, Col, Row } from './Grid';
 
-const Container = styled.div.attrs({
-  className: 'container'
-})``;
+// const LargeCol = Col.extend.attrs({ ClassName: 'col' })``;
 
-const Row = styled.div.attrs({
-  className: 'row'
-})``;
-const Col = styled.div.attrs({
-  className: 'col-sm'
-})``;
+// const MedCol = Col.extend.attrs({ ClassName: 'col-md-auto' })``;
+
+// const SmallCol1 = Col.extend.attrs({ ClassName: 'col col-lg-2' })``;
+
 // $FlowFixMe
 const StatusMessageBar = props => (
   <Container>
