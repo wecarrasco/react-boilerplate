@@ -17,7 +17,7 @@ const CustomLabel = styled.label.attrs({
 })``;
 // $FlowFixMe
 const CheckBox = props => (
-  <CustomCheckBox>
+  <CustomCheckBox onChange={props.onChange}>
     <CustomInput />
     <CustomLabel>{props.label}</CustomLabel>
   </CustomCheckBox>

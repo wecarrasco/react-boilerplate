@@ -8,24 +8,28 @@ import Title from './Title';
 
 // $FlowFixMe
 const SendMessage = props => (
-  <Card>
-    <Container>
-      <Row>
-        <Title />
-      </Row>
-      <Row>
-        <Col>
-          <AddMessage />
-        </Col>
-        <Col med>
-          <CheckBox label="Private" />
-        </Col>
-        <Col med>
-          <Button primary>Send</Button>
-        </Col>
-      </Row>
-    </Container>
-  </Card>
+  <form onSubmit={props.onSubmit}>
+    <Card>
+      <Container>
+        <Row>
+          <Title onChange={props.onChange} />
+        </Row>
+        <Row>
+          <Col>
+            <AddMessage onChange={props.onChange} />
+          </Col>
+          <Col med>
+            <CheckBox label="Private" onChange={props.onChange} />
+          </Col>
+          <Col med>
+            <Button primary onChange={props.onChange}>
+              Send
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+    </Card>
+  </form>
 );
 
 /**@component */

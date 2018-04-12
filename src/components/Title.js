@@ -28,7 +28,7 @@ const Title = props => (
     <InputPrepend>
       <InputTitle>Title</InputTitle>
     </InputPrepend>
-    <InputText />
+    <InputText onChange={props.onChange} />
   </InputGroup>
 );
 
