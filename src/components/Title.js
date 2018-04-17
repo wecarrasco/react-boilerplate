@@ -19,7 +19,8 @@ const InputText = styled.input.attrs({
   type: 'text',
   placeholder: 'Title',
   'aria-label': 'Title',
-  'aria-describedby': 'basic-addon1'
+  'aria-describedby': 'basic-addon1',
+  id: 'MessageTitle'
 })``;
 
 // $FlowFixMe

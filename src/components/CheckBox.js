@@ -8,12 +8,12 @@ const CustomCheckBox = styled.div.attrs({
 const CustomInput = styled.input.attrs({
   className: 'custom-control-input',
   type: 'checkbox',
-  id: 'customCheck1'
+  id: 'MessagePrivacy'
 })``;
 
 const CustomLabel = styled.label.attrs({
   className: 'custom-control-label',
-  htmlFor: 'customCheck1'
+  htmlFor: 'MessagePrivacy'
 })``;
 // $FlowFixMe
 const CheckBox = props => (

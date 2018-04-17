@@ -15,7 +15,8 @@ const InputText = styled.span.attrs({
 })``;
 
 const TextArea = styled.textarea.attrs({
-  className: 'form-control'
+  className: 'form-control',
+  id: 'MessageContent'
 })``;
 
 // $FlowFixMe

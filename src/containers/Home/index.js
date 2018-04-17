@@ -14,7 +14,12 @@ class Home extends Component<any, any> {
         mensaje: 'este es un mensaje',
         public: false
       }
-    ]
+    ],
+    newMessage: {
+      title: '',
+      mensaje: '',
+      public: false
+    }
   };
 
   // $FlowFixMe
@@ -25,14 +30,14 @@ class Home extends Component<any, any> {
   };
 
   // $FlowFixMe
-  logEvent = evt => {
+  changeValue = evt => {
     console.log(evt.target.value);
     console.log(evt.target.checked);
-    console.log(evt.target);
+    console.log(evt.target.id);
   };
   // $FlowFixMe
   handleSubmit = evt => {
-    console.log(evt.target);
+    console.log(evt.target.value);
     evt.preventDefault();
   };
 
@@ -40,7 +45,7 @@ class Home extends Component<any, any> {
     return (
       <div>
         <ListOfMessages Messages={this.state.mensajes} />
-        <SendMessage onSubmit={this.handleSubmit} onChange={this.logEvent} />
+        <SendMessage onSubmit={this.handleSubmit} onChange={this.changeValue} />
       </div>
     );
   }
