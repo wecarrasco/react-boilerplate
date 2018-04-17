@@ -29,7 +29,7 @@ const Title = props => (
     <InputPrepend>
       <InputTitle>Title</InputTitle>
     </InputPrepend>
-    <InputText onChange={props.onChange} />
+    <InputText value={props.defaultTitle.title} onChange={props.onChange} />
   </InputGroup>
 );
 

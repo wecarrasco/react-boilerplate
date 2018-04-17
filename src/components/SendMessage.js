@@ -12,14 +12,21 @@ const SendMessage = props => (
     <Card>
       <Container>
         <Row>
-          <Title onChange={props.onChange} />
+          <Title defaultTitle={props.defaultValues} onChange={props.onChange} />
         </Row>
         <Row>
           <Col>
-            <AddMessage onChange={props.onChange} />
+            <AddMessage
+              defaultMessage={props.defaultValues}
+              onChange={props.onChange}
+            />
           </Col>
           <Col med>
-            <CheckBox label="Private" onChange={props.onChange} />
+            <CheckBox
+              defaultPrivacy={props.defaultValues}
+              label="Private"
+              onChange={props.onChange}
+            />
           </Col>
           <Col med>
             <Button primary onChange={props.onChange}>

@@ -1,5 +1,5 @@
 // $FlowFixMe
-import { equals } from 'rambda';
+import { equals } from 'ramda';
 
 // $FlowFixMe
 const isCheckbox = id => {

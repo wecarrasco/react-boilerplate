@@ -25,7 +25,7 @@ const AddMessage = props => (
     <InputPrepend>
       <InputText>Mensaje</InputText>
     </InputPrepend>
-    <TextArea onChange={props.onChange} />
+    <TextArea value={props.defaultMessage.mensaje} onChange={props.onChange} />
   </InputGroup>
 );
 
