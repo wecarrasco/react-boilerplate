@@ -75,8 +75,10 @@ class Home extends Component<any, any> {
   };
   // $FlowFixMe
   handleSubmit = evt => {
+    const newMessageConMod = {...this.state.newMessage, publicMod: !this.state.newMessage.public};
+
     // $FlowFixMe
-    compose(this.borrarInputs, this.addMessage)(this.state.newMessage);
+    compose(this.borrarInputs, this.addMessage)(newMessageConMod);
     evt.preventDefault();
   };
 
