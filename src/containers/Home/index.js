@@ -39,14 +39,10 @@ class Home extends Component<any, any> {
 
   // $FlowFixMe
   changeValue = evt => {
-    // console.log(evt.target.value);
-    // console.log(evt.target.checked);
-    // console.log(evt.target.id);
     const fn = cond([
       [
         isCheckbox,
         (x, value) => {
-          console.log('isCheckbox');
           const nuevoMensaje = newPrivacy(this.state.newMessage, value);
           this.setState({ ...this.state, newMessage: nuevoMensaje });
         }
@@ -54,7 +50,6 @@ class Home extends Component<any, any> {
       [
         isTitle,
         (x, value) => {
-          console.log('isTitle');
           const nuevoTitulo = newTitle(this.state.newMessage, value);
           this.setState({ ...this.state, newMessage: nuevoTitulo });
         }
@@ -62,7 +57,6 @@ class Home extends Component<any, any> {
       [
         isContent,
         (x, value) => {
-          console.log('isContent');
           const nuevoContenido = newContent(this.state.newMessage, value);
           this.setState({ ...this.state, newMessage: nuevoContenido });
         }
