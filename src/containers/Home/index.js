@@ -3,6 +3,7 @@ import ListOfMessages from '../../components/ListOfMessages';
 import SendMessage from '../../components/SendMessage';
 import { isCheckbox, isContent, isTitle } from './helperFunctions';
 import { newPrivacy, newTitle, newContent } from './setNewMessage';
+import validate from './validateForm';
 // $FlowFixMe
 import { cond, propOr, compose } from 'ramda';
 class Home extends Component<any, any> {
@@ -76,9 +77,9 @@ class Home extends Component<any, any> {
   // $FlowFixMe
   handleSubmit = evt => {
     const newMessageConMod = {...this.state.newMessage, publicMod: !this.state.newMessage.public};
-
+    const isValido = validate(newMessageConMod);
     // $FlowFixMe
-    compose(this.borrarInputs, this.addMessage)(newMessageConMod);
+    isValido.valido ? compose(this.borrarInputs, this.addMessage)(newMessageConMod) : alert(isValido.error)
     evt.preventDefault();
   };
 
