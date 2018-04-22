@@ -1,10 +1,12 @@
 ﻿# To Do!
  - [x] Validar form
  - [x] Reparar public/private badge 
- - [ ] Implementar Redux
+ - [x] Implementar Redux
  - [ ] Eliminar mensaje
  - [ ] Contar likes
  - [ ] Contar dislikes
+ - [ ] Get all messages al iniciar
+ - [ ] autenticacion
  - [ ] Conectar a backend 
 
 
