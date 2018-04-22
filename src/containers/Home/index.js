@@ -4,6 +4,9 @@ import SendMessage from '../../components/SendMessage';
 import { isCheckbox, isContent, isTitle } from './helperFunctions';
 import { newPrivacy, newTitle, newContent } from './setNewMessage';
 import validate from './validateForm';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import {publishMessage} from './Actions';
 // $FlowFixMe
 import { cond, propOr, compose } from 'ramda';
 class Home extends Component<any, any> {
@@ -15,27 +18,9 @@ class Home extends Component<any, any> {
   };
 
   state = {
-    mensajes: [
-      {
-        title: 'primer Mensaje',
-        mensaje: 'este es un mensaje',
-        public: true
-      },
-      {
-        title: 'segundo Mensaje',
-        mensaje: 'este es un mensaje',
-        public: false
-      }
-    ],
     newMessage: { ...this.defaultNewMessage }
   };
 
-  // $FlowFixMe
-  addMessage = ({ mensaje, publicMod, title }) => {
-    const newMensaje = { title, mensaje, public: publicMod };
-    const newState = this.state.mensajes.push(newMensaje);
-    this.setState({ newState });
-  };
 
   // $FlowFixMe
   changeValue = evt => {
@@ -65,22 +50,24 @@ class Home extends Component<any, any> {
     const value = propOr(evt.target.value, 'checked');
     fn(evt.target.id, value(evt.target));
   };
+
   borrarInputs = () => {
     this.setState({ ...this.state, newMessage: { ...this.defaultNewMessage } });
   };
+
   // $FlowFixMe
   handleSubmit = evt => {
     const newMessageConMod = {...this.state.newMessage, publicMod: !this.state.newMessage.public};
     const isValido = validate(newMessageConMod);
     // $FlowFixMe
-    isValido.valido ? compose(this.borrarInputs, this.addMessage)(newMessageConMod) : alert(isValido.error)
+    isValido.valido ? compose(this.borrarInputs, this.props.publishMessage)(newMessageConMod) : alert(isValido.error)
     evt.preventDefault();
   };
 
   render() {
     return (
       <div>
-        <ListOfMessages Messages={this.state.mensajes} />
+        <ListOfMessages Messages={this.props.messages} />
         <SendMessage
           defaultValues={this.state.newMessage}
           onSubmit={this.handleSubmit}
@@ -91,4 +78,14 @@ class Home extends Component<any, any> {
   }
 }
 
-export default Home;
+
+const mapStateToProps = state => {
+  return {messages: state.messageReducer.messages}
+};
+
+const mapDispatchToProps = dispatch=> bindActionCreators({
+  publishMessage
+},dispatch);
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Home);

@@ -23,6 +23,7 @@ type Props = {
 };
 
 export class App extends Component<Props> {
+  
   componentDidMount() {
     const logger = new Logger();
     logger.log('testing', 'Info');

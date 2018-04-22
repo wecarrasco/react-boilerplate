@@ -13,6 +13,7 @@ import App from './containers/App';
 // $FlowFixMe
 import registerServiceWorker from './registerServiceWorker';
 import appSagas from './containers/App/sagas';
+import messageSagas from './containers/Home/sagas';
 import LanguageProvider from './containers/LanguageProvider';
 import i18n from './i18n';
 
@@ -30,6 +31,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // $FlowFixMe
 appSagas.map(store.runSaga);
+messageSagas.map(store.runSaga);
 ReactDOM.render(
   <Provider store={store}>
     <LanguageProvider messages={i18n.messages}>
